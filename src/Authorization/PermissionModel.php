@@ -9,5 +9,7 @@ use Myth\Auth\Models\PermissionModel as BaseModel;
  */
 class PermissionModel extends BaseModel
 {
-    protected $returnType = 'array';
+    protected $returnType       = 'array';
+    protected $protectFields    = true;
+    protected $allowedFields    = ['name', 'description'];
 }
