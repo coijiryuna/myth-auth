@@ -18,6 +18,7 @@ class PermissionModel extends Model
         'name'        => 'required|max_length[255]|is_unique[auth_permissions.name,name,{name}]',
         'description' => 'max_length[255]',
     ];
+    protected $skipValidation = true;
 
     /**
      * Checks to see if a user, or one of their groups,
